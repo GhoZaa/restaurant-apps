@@ -1,5 +1,6 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
+import '../styles/responsive.css';
 
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {

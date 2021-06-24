@@ -1,0 +1,34 @@
+@media screen and (min-width: 568px) {
+	.list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 15px;
+		grid-row-gap: 18px
+	}
+}
+
+@media screen and (min-width: 769px){
+	.item__content {
+		padding: 16px 24px 20px
+	}
+	.item__description {
+		font-size: 16px
+	}
+}
+
+@media screen and (min-width: 920px){
+	.bd-container{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.restaurant {
+		max-width: 1200px
+	}
+}
