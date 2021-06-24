@@ -1,32 +1,39 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
 import '../styles/responsive.css';
+import App from "./views/app";
 
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId), 
-  nav = document.getElementById(navId);
+const app = new App({
+  button: document.querySelector('#nav-toggle'),
+  drawer: document.querySelector('#nav-menu'),
+  content: document.querySelector('#main-content'),
+});
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show-menu");
-    });
-  }
-};
-showMenu("nav-toggle", "nav-menu");
+// /*==================== SHOW MENU ====================*/
+// const showMenu = (toggleId, navId) => {
+//   const toggle = document.getElementById(toggleId), 
+//   nav = document.getElementById(navId);
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll(".nav__link");
-const hero = document.querySelector(".hero");
-const main = document.querySelector("main");
+//   if (toggle && nav) {
+//     toggle.addEventListener("click", () => {
+//       nav.classList.toggle("show-menu");
+//     });
+//   }
+// };
+// showMenu("nav-toggle", "nav-menu");
 
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show-menu");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-hero.addEventListener("click", linkAction);
-main.addEventListener("click", linkAction);
+// /*==================== REMOVE MENU MOBILE ====================*/
+// const navLink = document.querySelectorAll(".nav__link");
+// const hero = document.querySelector(".hero");
+// const main = document.querySelector("main");
+
+// function linkAction() {
+//   const navMenu = document.getElementById("nav-menu");
+//   navMenu.classList.remove("show-menu");
+// }
+// navLink.forEach((n) => n.addEventListener("click", linkAction));
+// hero.addEventListener("click", linkAction);
+// main.addEventListener("click", linkAction);
 
 /*==================== FETCH JSON DATA ====================*/
 import("../DATA.json").then(({ default: jsonData }) => {
