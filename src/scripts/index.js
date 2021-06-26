@@ -9,6 +9,14 @@ const app = new App({
   content: document.querySelector("#main-content"),
 });
 
+window.addEventListener("hashchange", () => {
+  app.renderPage();
+});
+
+window.addEventListener("load", () => {
+  app.renderPage();
+});
+
 // /*==================== SHOW MENU ====================*/
 // const showMenu = (toggleId, navId) => {
 //   const toggle = document.getElementById(toggleId),
