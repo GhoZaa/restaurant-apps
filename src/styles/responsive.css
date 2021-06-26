@@ -1,8 +1,27 @@
+@media (max-width: 416px) {
+  .text-heading::after {
+    top: 8.7rem;
+  }
+
+  .review-date,
+  .review-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 18px;
+  }
+}
+
 @media screen and (min-width: 662px) {
   .l-header {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
-    /* max-height: ; */
   }
 
   .l-header .nav__logo a {
@@ -29,20 +48,28 @@
     text-align: center;
     margin: 0;
   }
-}
 
-@media screen and (min-width: 800px) {
-  .l-header .nav__logo h1 {
-    font-size: 2em;
+  .row .text-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
-}
 
-@media screen and (min-width: 568px) {
-  .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 18px;
+  .row .text-heading::after {
+    top: 5rem;
+  }
+
+  .description .title {
+    font-size: 2rem;
+  }
+
+  img.img-res2 {
+    max-height: 80%;
+    max-width: 80%;
+  }
+
+  .card .description .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }
 
@@ -52,6 +79,12 @@
   }
   .item__description {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .l-header .nav__logo h1 {
+    font-size: 2em;
   }
 }
 

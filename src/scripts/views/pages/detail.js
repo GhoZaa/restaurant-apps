@@ -1,12 +1,20 @@
+import Source from "../../data/source";
+import UrlParser from "../../routes/url-parser";
+import { createRestaurantDetailTemplate } from "../templates/template-creator";
+
 const Detail = {
   async render() {
     return `
-        <h2>Detail Page</h2>
+    <div id="movie" class="movie"></div>
       `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const restaurant = await Source.detailRestaurant(url.id);
+    // console.log(restaurant);
+    const restaurantContainer = document.querySelector('#movie');
+    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
   },
 };
 
