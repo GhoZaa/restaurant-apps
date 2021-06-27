@@ -5,7 +5,7 @@ import { createRestaurantDetailTemplate } from "../templates/template-creator";
 const Detail = {
   async render() {
     return `
-    <div id="movie" class="movie"></div>
+    <div id="detail-restaurant"></div>
       `;
   },
 
@@ -13,7 +13,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await Source.detailRestaurant(url.id);
     // console.log(restaurant);
-    const restaurantContainer = document.querySelector('#movie');
+    const restaurantContainer = document.querySelector('#detail-restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
   },
 };

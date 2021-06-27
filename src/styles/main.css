@@ -271,25 +271,16 @@ ul {
 .text-heading {
   text-align: center;
   font-size: 2rem;
-  padding: 1.2rem 0;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  margin: 1rem 0;
 }
-
-/* .text-heading::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 1px;
-  position: absolute;
-  top: 4.7rem;
-  left: 25%;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-} */
 
 .detail {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
+  font-size: 16px;
+  justify-items: center;
 }
 
 .images-detail {
@@ -306,12 +297,16 @@ img.img-res2 {
 
 ul.detail-info {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
-  padding-left: 0;
+  margin: 1.4rem auto;
   margin-bottom: 0;
-  margin-top: 1.4rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* padding-left: 0; */
+  /* margin-bottom: 0; */
+  /* margin-top: 1.4rem auto; */
   border: 1px solid #e0e0e0;
+  border-radius: 1rem;
 }
 
 .detail-info li {
@@ -321,9 +316,21 @@ ul.detail-info {
 }
 
 .detail-menu.grid-2 {
+  /* max-width: 100%; */
+  /* margin: auto; */
+  /* display: flex;
+  flex-direction: column;
+  margin: 1.4rem auto;
+  gap: 1.4rem;
+  border: 1px solid #e0e0e0; */
+  /* border: 1px solid #e0e0e0; */
   display: grid;
   gap: 1.4rem;
-  border: 1px solid #e0e0e0;
+  padding: 0;
+  /* max-width: 100%; */
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+  /* margin: 1.4rem; */
 }
 
 .detail-info .description {
@@ -335,18 +342,29 @@ ul.detail-info {
 }
 
 .category {
-  padding: 0.7rem 1.5rem;
-  background-color: #5e72e4;
-  color: #fff;
-  margin-right: 2px;
+  padding: 0 1rem;
+  background-color: #52db1c;
+  color: #ffffff;
+  margin-right: 1.5em;
   border-radius: 0.6em;
+  /* width: 20px; */
 }
 
 .detail-food,
 .detail-drink {
-  display: flex;
-  flex-direction: column;
+  /* position: static;
+  display: block; */
+  /* flex-direction: column; */
+  /* margin: 0; */
+  /* left: 0; */
+  max-width: 100%;
+  margin-left: 0;
   padding: 0.8rem;
+}
+
+.detail-food li,
+.detail-drink li {
+  list-style: disc;
 }
 
 .detail-food i,
@@ -367,19 +385,16 @@ ul.detail-info {
 }
 
 .detail h3 {
-  font-size: 2rem;
+  margin-top: 1.3rem;
   text-align: center;
-  margin-top: 3rem;
+  font-size: 1.4rem;
 }
 
 .detail-review.grid-3 {
   display: grid;
   gap: 1.4rem;
-}
-
-.detail-review {
-  max-width: 100%;
-  text-align: center;
+  margin: auto;
+  max-width: 80%;
 }
 
 .detail-review-item {
@@ -406,7 +421,7 @@ ul.detail-info {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 130px;
+  /* max-width: fit-content; */
 }
 
 .review-name img {
@@ -416,6 +431,7 @@ ul.detail-info {
 }
 
 .review-date {
+  /* max-width: 85px; */
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -424,9 +440,8 @@ ul.detail-info {
   padding: 1.5em;
   white-space: wrap;
   overflow: hidden;
-  /* text-overflow: ellipsis; */
-  max-width: 250px;
-  margin: auto;
+  /* max-width: 80%; */
+  /* margin: auto; */
 }
 
 footer {

@@ -1,18 +1,19 @@
 import CONFIG from "../../global/config";
 
 const createRestaurantDetailTemplate = (restaurant) => `
-<h2 class="text-heading">${restaurant.name}</h2>
 <div class="detail">
-    <div >
+    <div>
         <div class="images-detail">
-            <img class="img-res2" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" />
+            <img class="img-res2" alt="${restaurant.name}'s image" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" />
         </div>
         <ul class="detail-info">
             <li>
-            <p class="description"><strong>Detail restaurant:</strong> <br>${restaurant.description}</p></li>
-            <li><span><i title="address" class="fa fa-map-marker-alt"></i>&emsp;${restaurant.address}, ${restaurant.city}</span></li>
-            <li><span>${restaurant.rating}</span></li>
-            <li>${restaurant.categories.map((category) =>
+            <p class="description"><strong>Description:</strong> <br>${restaurant.description}</p></li>
+            <li>
+            <p><strong>Address:</strong><br>${restaurant.address}, ${restaurant.city}</p>
+            </li>
+            <li><p><strong>Rating:</strong><br><span>${restaurant.rating}</span></p></li>
+            <li><strong>Categories:</strong><br>${restaurant.categories.map((category) =>
                   `<span class="category"> ${category.name}</span>`
               ).join("")}
             </li>
@@ -21,13 +22,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h3>Menu</h3>
     <div class="detail-menu grid-2">
         <div class="detail-food">
-            <h4><i class="fas fa-cheese"></i>Makanan</h4>            
+            <h4><span>🍴</span> Makanan</h4>            
             <ul>
                 ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join("")}
             </ul>
         </div>
         <div class="detail-drink">
-            <h4><i class="fas fa-mug-hot"></i>Minuman</h4>
+            <h4><span>🍹</span> Minuman</h4>
             <ul>
                 ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join("")}
             </ul>
@@ -37,7 +38,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="detail-review grid-3">
     ${restaurant.customerReviews.map((review) => `<div class="detail-review-item">
     <div class="review-header">
-        <p class="review-name"><img src="user.png" alt="reviewer ${review.name}">&nbsp;&nbsp;${review.name}</p>
+        <p class="review-name"><img src="user.png" alt="reviewer ${review.name}">&nbsp;&nbsp;${review.name}</p><br>
         <p class="review-date">${review.date}</p>
     </div>
     <div class="review-body">${review.review}
@@ -50,7 +51,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
         <div class="list__item">
             <img class="item__img" src="${
-              CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name} image" title="${restaurant.name}">
+              CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}'s image" title="${restaurant.name}">
             <div class="item__content">
                 <h3 class="item__title"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
                 <p class="item__txt">
