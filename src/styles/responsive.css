@@ -1,11 +1,6 @@
 @media (max-width: 416px) {
-  .text-heading::after {
-    top: 8.7rem;
-  }
-
-  .review-date,
-  .review-name {
-    font-size: 0.8rem;
+  .detail-review-item {
+    font-size: 15px;
   }
 }
 
@@ -49,38 +44,28 @@
     margin: 0;
   }
 
-  .row .text-heading {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  .row .text-heading::after {
-    top: 5rem;
-  }
-
   .detail {
     font-size: 1.3em;
   }
 
   .detail-info,
-  .detail-menu.grid-2,
-  .detail-review.grid-3 {
+  .detail-menu,
+  .detail-review {
     max-width: 80%;
     padding: 1.2rem;
   }
 
-  img.img-res2 {
-    max-height: 80%;
+  .images-detail {
     max-width: 80%;
   }
 
-  .card .description .subtitle {
+  .description {
     font-size: 1.5rem;
     font-weight: 400;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .item__content {
     padding: 16px 24px 20px;
   }

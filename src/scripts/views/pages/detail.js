@@ -1,10 +1,7 @@
 import Source from "../../data/source";
 import UrlParser from "../../routes/url-parser";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
-import {
-  createLikeButtonTemplate,
-  createRestaurantDetailTemplate,
-} from "../templates/template-creator";
+import { createRestaurantDetailTemplate } from "../templates/template-creator";
 
 const Detail = {
   async render() {
