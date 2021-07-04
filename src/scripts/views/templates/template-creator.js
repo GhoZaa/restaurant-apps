@@ -1,4 +1,4 @@
-import CONFIG from "../../global/config";
+import CONFIG from '../../global/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
     <div class="detail">
@@ -12,18 +12,18 @@ const createRestaurantDetailTemplate = (restaurant) => `
             <h3>Rating:</h3>
             <p><span class="item__rating">${restaurant.rating}</span></p>
             <h3>Categories:</h3>
-            ${restaurant.categories.map((category) =>`<span class="category"> ${category.name}</span>`).join("")}
+            ${restaurant.categories.map((category) => `<span class="category"> ${category.name}</span>`).join('')}
             <h3>Menu:</h3>
             <div class="detail-food">
                 <h4>🍴 Foods</h4>            
                 <ul>
-                    ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join("")}
+                    ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
                 </ul>
             </div>
             <div class="detail-drink">
                 <h4>🍹 Drinks</h4>
                 <ul>
-                    ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join("")}
+                    ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
                 </ul>
             </div>        
         </div>
@@ -65,7 +65,7 @@ const createLikeButtonTemplate = () => `
         <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>
 `;
- 
+
 const createLikedButtonTemplate = () => `
     <button aria-label="unlike this movie" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
@@ -73,8 +73,8 @@ const createLikedButtonTemplate = () => `
 `;
 
 export {
-    createRestaurantDetailTemplate,
-    createRestaurantItemTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate, 
+  createRestaurantDetailTemplate,
+  createRestaurantItemTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };
