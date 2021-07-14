@@ -1,6 +1,6 @@
 import Source from '../../data/source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitiator from '../../utils/like-button-presenter';
 import { createErrorLoadContent, createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
