@@ -73,14 +73,23 @@ const createErrorLoadContent = () => `
 </div>
 `;
 
+const createEmptyPage = () => `
+<div class="detail">
+    <div class="detail-error">
+        <h3>List is empty!</h3>
+        <p class="description">You don't have a favorite restaurant yet</p>
+    </div>
+</div>
+`;
+
 const createLikeButtonTemplate = () => `
-    <button aria-label="like this movie" id="likeButton" class="like">
+    <button aria-label="like this restaurant" id="likeButton" class="like">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>
 `;
 
 const createLikedButtonTemplate = () => `
-    <button aria-label="unlike this movie" id="likeButton" class="like">
+    <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
 `;
@@ -89,6 +98,7 @@ export {
   createRestaurantDetailTemplate,
   createRestaurantItemTemplate,
   createErrorLoadContent,
+  createEmptyPage,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };
