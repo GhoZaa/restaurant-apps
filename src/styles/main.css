@@ -372,6 +372,27 @@ ul {
   overflow: hidden;
 }
 
+.detail-error {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.8rem;
+  border: 1px solid #c5290d;
+  border-radius: 1rem;
+}
+.detail-error h3 {
+  color: #c5290d;
+  margin-bottom: 8px;
+}
+
+.detail-error .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
 .like {
   font-size: 18px;
   position: fixed;
