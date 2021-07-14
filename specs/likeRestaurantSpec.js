@@ -58,7 +58,7 @@ describe('Liking A Restaurant', () => {
 
     // Tambahkan restoran dengan ID 1 ke daftar resto yang disukai
     await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
-    // Simulasikan pengguna menekan tombol suka film
+    // Simulasikan pengguna menekan tombol suka resto
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
     // tidak ada restoran yang ganda
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([{ id: 1 }]);
