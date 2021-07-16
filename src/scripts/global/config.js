@@ -1,6 +1,6 @@
 const CONFIG = {
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
-  BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/medium/',
+  BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/small/',
   CAHCE_NAME: 'RestoApps-v1',
   DATABASE_NAME: 'resto-app-db',
   DATABASE_VERSION: 1,
