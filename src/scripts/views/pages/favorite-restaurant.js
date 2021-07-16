@@ -7,14 +7,14 @@ const FavoriteRestaurant = {
         <div class="restaurant__data">
             <h2>Your Favorite Restaurant</h2>
             <div class="list" id="restaurants"></div>
-            <div id="error"></div>
+            <div id="empty-list"></div>
         </div>
       `;
   },
 
   async afterRender() {
     const restaurantsContainer = document.querySelector('#restaurants');
-    const errorContainer = document.querySelector('#error');
+    const errorContainer = document.querySelector('#empty-list');
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     console.log(restaurants);
     if (restaurants.length === 0) {
