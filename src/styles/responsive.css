@@ -1,4 +1,14 @@
-@media (max-width: 416px) {
+@media screen and (max-width: 800px) {
+  .hero {
+    background-image: url("/images/heros/hero-image_3-medium.jpg");
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    background-image: url("/images/heros/hero-image_3-small.jpg");
+  }
+
   .detail-review-item {
     font-size: 15px;
   }
